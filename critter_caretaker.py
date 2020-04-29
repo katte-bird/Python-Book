@@ -5,7 +5,7 @@ class Critter(object):
     """Виртуальный питомец"""
 
     def __init__(self, name, hunger = 0, boredom = 0):
-        print("Появилася на свет новая зверюшка!")
+        print("Появилась на свет новая зверюшка!")
         self.name = name
         self.hunger = hunger
         self.boredom = boredom
