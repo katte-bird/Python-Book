@@ -17,6 +17,7 @@ class Critter(object):
     @property
     def mood(self):
         unhappiness = self.hunger + self.boredom
+
         if unhappiness < 5 :
             m = "прекрасно"
         elif 5 <= unhappiness <= 10 :
@@ -25,6 +26,7 @@ class Critter(object):
             m = "не сказать чтобы хорошо"
         else:
             m = "ужасно"
+            
         return m
 
     def talk(self):
