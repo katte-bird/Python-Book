@@ -79,7 +79,7 @@ class Animal(object):
         animal = None
         while animal != "0":
             print("\nWhat animal to feed?")
-            Animal.display()
+            __class__.display()
             try:
                 animal = int(input("\nYour choice: "))
                 if animal > len(__class__.farm):
@@ -90,7 +90,7 @@ class Animal(object):
                     __class__.farm[animal - 1].eat()
             except ValueError:
                 __class__.print_mistake_animals()
-        Animal.pass_time()
+        __class__.pass_time()
 
     @staticmethod
     def display():
@@ -104,7 +104,7 @@ class Animal(object):
         animal = None
         while animal != 0:
             print("\nWhich animal to play with?")
-            Animal.display()
+            __class__.display()
             try:
                 animal = int(input("\nYour choice: "))
                 if animal > len(__class__.farm):
@@ -115,7 +115,7 @@ class Animal(object):
                     __class__.farm[animal - 1].to_play()
             except ValueError:
                 __class__.print_mistake_animals()
-        Animal.pass_time()
+        __class__.pass_time()
 
     @staticmethod
     def check_condition():
